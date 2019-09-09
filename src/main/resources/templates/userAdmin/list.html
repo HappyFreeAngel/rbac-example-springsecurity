@@ -5,18 +5,18 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{/layout/layout}">
 <head>
-    <title>Users</title>
+    <title>用户</title>
 </head>
 <body>
 <div layout:fragment="content">
-    <h1>Users</h1>
+    <h1>用户</h1>
     <table class="ui table" th:if="${users}">
         <thead>
             <tr>
                 <th>#</th>
-                <th>Account</th>
-                <th>Name</th>
-                <th>Role</th>
+                <th>账号</th>
+                <th>姓名</th>
+                <th>角色</th>
             </tr>
         </thead>
         <tbody>
@@ -31,9 +31,9 @@
     <div class="ui message" th:unless="${users}">
         <div class="content">
             <div class="header">
-                No users
+                没有用户
             </div>
-            <p>It's unexpected.</p>
+            <p>这是出乎意料的。</p>
         </div>
     </div>
 </div>

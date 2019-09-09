@@ -5,7 +5,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{/layout/layout}">
 <head>
-    <title>Signup</title>
+    <title>注册</title>
 </head>
 <body>
 <div layout:fragment="content">
@@ -24,7 +24,7 @@
         <div class="column">
             <h2 class="ui teal header">
                 <div class="content">
-                    Signup
+                    用户注册
                 </div>
             </h2>
             <form class="ui large form" method="post" th:action="@{/signup}">
@@ -57,13 +57,13 @@
                         <div class="ui left icon input">
                             <i class=""></i>
                             <select name="role">
-                                <option value="admin">Administrator</option>
-                                <option value="developer">Developer</option>
-                                <option value="guest" selected>Guest</option>
+                                <option value="admin">管理员</option>
+                                <option value="developer">开发者</option>
+                                <option value="guest" selected>游客</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="ui fluid large teal submit button">Signup</button>
+                    <button type="submit" class="ui fluid large teal submit button">注册</button>
                 </div>
 
                 <div class="ui error message"></div>

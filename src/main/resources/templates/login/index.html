@@ -24,7 +24,7 @@
         <div class="column">
             <h2 class="ui teal header">
                 <div class="content">
-                    Log-in to your account
+                    登陆您的账号
                 </div>
             </h2>
             <form class="ui large form" method="post" th:action="@{/login}">
@@ -41,14 +41,14 @@
                             <input type="password" name="password" placeholder="Password">
                         </div>
                     </div>
-                    <button type="submit" class="ui fluid large teal submit button">Login</button>
+                    <button type="submit" class="ui fluid large teal submit button">登录</button>
                 </div>
 
                 <div class="ui error message"></div>
 
             </form>
             <div class="ui message">
-                New to us? <a th:href="@{/signup}">Sign Up</a>
+                还没注册? <a th:href="@{/signup}">注册</a>
             </div>
         </div>
     </div>

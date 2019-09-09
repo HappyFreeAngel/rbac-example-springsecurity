@@ -37,6 +37,11 @@ public class Application implements CommandLineRunner {
     @Transactional
     @Override
     public void run(String... args) throws Exception {
+
+        //to do 从数据源头读取权限角色的配置,然后创建. 源头可以是文件,数据库(SQL,NOSQL,URL),ldap 协议
+
+
+        //1. 创建权限
         Permission readIssue = new Permission("readIssue");
         Permission writeIssue = new Permission("writeIssue");
         Permission manageUser = new Permission("manageUser");
@@ -44,6 +49,9 @@ public class Application implements CommandLineRunner {
         em.persist(readIssue);
         em.persist(writeIssue);
         em.persist(manageUser);
+
+
+        //2.创建角色
 
         Role adminRole = new Role("admin");
         adminRole.setPermissions(new HashSet<>() {{
@@ -65,6 +73,9 @@ public class Application implements CommandLineRunner {
             add(readIssue);
         }});
         em.persist(guestRole);
+
+
+        //3.创建用户 格式:用户名和密码
 
         User guestUser = new User("guest", "guest", "guest", passwordEncoder.encode("guest"));
         guestUser.setRoles(new HashSet<>() {{

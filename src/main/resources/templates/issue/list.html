@@ -5,23 +5,23 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{/layout/layout}">
 <head>
-    <title>Issues</title>
+    <title>标题</title>
 </head>
 <body>
 <div layout:fragment="content">
-    <h1>Issues</h1>
-    <a class="ui button" th:href="@{/issue/new}">New</a>
+    <h1>标题</h1>
+    <a class="ui button" th:href="@{/issue/new}">创建新标题</a>
     <table class="ui table" th:if="${issues}">
         <thead>
             <tr>
                 <th>#</th>
-                <th>Subject</th>
+                <th>标题</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="issue : ${issues}" th:object="${issue}">
-                <td th:text="*{issueId}">DUMMY ISSUE ID</td>
-                <td th:text="*{subject}">DUMMY SUBJECT</td>
+                <td th:text="*{issueId}">问题ID</td>
+                <td th:text="*{subject}">主题</td>
             </tr>
         </tbody>
     </table>

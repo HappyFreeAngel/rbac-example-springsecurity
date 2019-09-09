@@ -12,25 +12,25 @@
 <div class="ui fixed inverted menu">
     <div class="ui container">
         <a href="#" class="header item">
-            RBAC Example
+            SpringSecurity RBAC 实例
         </a>
         <a th:href="@{/}" href="../index.html" class="item"
            sec:authorize="isAuthenticated()">
-            Home
+            主页
         </a>
         <a th:href="@{/issues/}" href="../issue/list.html" class="item"
            sec:authorize="isAuthenticated() and hasAuthority('readIssue')">
-            Issue
+            标题
         </a>
         <a th:href="@{/users/}" href="../userAdmin/list.html" class="item"
            sec:authorize="isAuthenticated() and hasAuthority('manageUser')">
-            Users
+            用户
         </a>
 
         <div class="right item">
             <form method="post" th:action="@{/logout}" action="../login/index.html">
                 <button class="ui button" type="submit">
-                    <i class="ui sign out icon"></i>Logout
+                    <i class="ui sign out icon"></i>退出
                 </button>
             </form>
         </div>
