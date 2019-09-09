@@ -1,9 +1,8 @@
 # RBAC example
 
-This application is an example of role based access control using Spring Security, Spring MVC and Thymeleaf.
-
-Original(Ninja Framework) : https://github.com/kawasima/rbac-example by @kawasima
-
+此应用程序是使用Spring Security，Spring MVC和Thymeleaf进行基于角色的访问控制的示例。
+https://github.com/HappyFreeAngel/rbac-example-springsecurity.git
+  
 ## Get started
 
 ```bash
